@@ -34,6 +34,7 @@ void setup() {
   String version = SigFox.SigVersion();
   String ID = SigFox.ID();
   String PAC = SigFox.PAC();
+ 
 
   // Display module informations
 
