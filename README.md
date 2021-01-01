@@ -28,6 +28,8 @@ Arduino MKR Transport Tracker
 #include <MKRIMU.h>
 ``` 
 
+Interrupt https://github.com/arduino-libraries/MKRIMU/pull/2
+
 * Lib BNO055 (https://github.com/arduino-libraries/BNO055)
 ``` 
 #include "BNO055_support.h"
