@@ -10,14 +10,26 @@ Arduino MKR Transport Tracker
 ### Test Shields
 * https://store.arduino.cc/arduino-mkr-imu-shield
  
-## Preparation  
+## Board Preparation  
 
 * Arduino Genuino 1.8.13
 * Board Driver: Arduino SAMD Boards (32-bits ARM Cortex-M0+)
+
+## Lib Preparation if needed
+
 * Lib: Arduino SigFox for MKRFox1200
 ``` 
 #include <SigFox.h>
 ``` 
+
+* Lib: MKRNB (https://www.arduino.cc/en/Reference/MKRNB)
+
+Enales NB/GRPS network connection using the Arduino MKR NB 1500 board. This also allows you to connect to internet throught NarrowBand IoT or LTE Cat M1 networks.
+
+``` 
+#include <SigFox.h>
+``` 
+
 * Lib: Arduino Low Power 
 ``` 
 #include <ArduinoLowPower.h>
