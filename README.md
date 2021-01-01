@@ -22,4 +22,13 @@ Arduino MKR Transport Tracker
 ``` 
 #include <ArduinoLowPower.h>
 ``` 
+* Lib MKRIMU (https://github.com/arduino-libraries/MKRIMU)
 
+``` 
+#include <MKRIMU.h>
+``` 
+
+* Lib BNO055 (https://github.com/arduino-libraries/BNO055)
+``` 
+#include "BNO055_support.h"
+``` 
