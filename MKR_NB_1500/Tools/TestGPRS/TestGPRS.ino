@@ -19,6 +19,7 @@
 #include "arduino_secrets.h" 
 // Please enter your sensitive data in the Secret tab or arduino_secrets.h
 // PIN Number
+// #define SECRET_PINNUMBER     ""
 const char PINNUMBER[] = SECRET_PINNUMBER;
 
 // initialize the library instance
@@ -32,7 +33,7 @@ String errortext = "ERROR";
 
 // URL and path (for example: example.org)
 char url[] = "example.org";
-char urlproxy[] = "http://example.org";
+char urlproxy[] = "139.7.29.17";
 char path[] = "/";
 
 // variable to save obtained response
@@ -55,6 +56,8 @@ void loop() {
   // start module
   // if your SIM has PIN, pass it as a parameter of begin() in quotes
   Serial.print("Connecting NB IoT / LTE Cat M1 network...");
+
+  Serial.print("Check NBAccess with PIN...");
   if (nbAccess.begin(PINNUMBER) != NB_READY) {
     Serial.println(errortext);
     while (true);
