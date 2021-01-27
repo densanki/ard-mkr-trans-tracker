@@ -106,7 +106,7 @@ void sendString(String str) {
   delay(1);
   SigFox.beginPacket();
   SigFox.print(str);
-  int ret = SigFox.endPacket();  // send buffer to SIGFOX network
+  int ret = SigFox.endPacket(true);  // send buffer to SIGFOX network
 
   if (ret > 0) {
     Serial.println("No transmission");
