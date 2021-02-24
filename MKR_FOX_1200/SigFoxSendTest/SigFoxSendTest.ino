@@ -15,6 +15,8 @@
 
 #define LED 6         // This is the built_in led
 
+int counter = 0;
+
 void setup() {
    pinMode(LED,OUTPUT);
    digitalWrite(LED,LOW);
@@ -47,8 +49,12 @@ int8_t temp;
 
 void loop()
 {
-  sendStringAndGetResponse();
-  delay(10*60*1000);
+  // 10min
+  //delay(10*60*1000); 
+  // 2 min
+  delay(2*60*1000);
+  counter++;
+  sendStringAndGetResponse();  
 }
 
 void sendStringAndGetResponse() {
@@ -67,7 +73,7 @@ void sendStringAndGetResponse() {
   SigFox.beginPacket();
   
   SigfoxMessage msg;
-  msg.temp = (int8_t)SigFox.internalTemperature();
+  msg.temp = (int8_t)counter;
   SigFox.write((uint8_t*)&msg,sizeof(msg));
 
   int ret = SigFox.endPacket(true);  // send buffer to SIGFOX network and wait for a response
